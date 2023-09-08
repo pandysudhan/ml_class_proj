@@ -34,3 +34,4 @@ if not app.debug and not app.testing:
 
 
 
+from app import routes
