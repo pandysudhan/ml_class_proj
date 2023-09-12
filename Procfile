@@ -1,1 +1,1 @@
-web: gunicorn irisflower:app
+web: gunicorn irisflower:create_app()
