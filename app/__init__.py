@@ -6,7 +6,7 @@ from config import Config
 
 
 app = Flask(__name__)
-app.config.from_object(config_class)
+app.config.from_object(Config)
 
 
 if not app.debug and not app.testing:
