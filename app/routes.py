@@ -8,6 +8,8 @@ class iris_predict(Resource):
         features = features.split(',')
         for i in range(len(features)):
             features[i] = float(features[i])
+
+        print(features)
         return model_loader.find_type_iris(features)
     
 

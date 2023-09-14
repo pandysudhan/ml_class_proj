@@ -102,3 +102,34 @@ Traceback (most recent call last):
     with open(filename, 'rb') as f:
          ^^^^^^^^^^^^^^^^^^^^
 FileNotFoundError: [Errno 2] No such file or directory: './ml_model_test.joblib'
+2023-09-13 10:44:37,283 INFO: Microblog startup [in /Users/pandysudhan/dev/flask/irisflower/app/__init__.py:32]
+2023-09-13 10:44:52,696 ERROR: Exception on /4.7,3.2,1.2,0.2 [GET] [in /Users/pandysudhan/dev/flask/irisflower/venv/lib/python3.11/site-packages/flask/app.py:1414]
+Traceback (most recent call last):
+  File "/Users/pandysudhan/dev/flask/irisflower/venv/lib/python3.11/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pandysudhan/dev/flask/irisflower/venv/lib/python3.11/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pandysudhan/dev/flask/irisflower/venv/lib/python3.11/site-packages/flask_restful/__init__.py", line 489, in wrapper
+    resp = resource(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pandysudhan/dev/flask/irisflower/venv/lib/python3.11/site-packages/flask/views.py", line 109, in view
+    return current_app.ensure_sync(self.dispatch_request)(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pandysudhan/dev/flask/irisflower/venv/lib/python3.11/site-packages/flask_restful/__init__.py", line 604, in dispatch_request
+    resp = meth(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pandysudhan/dev/flask/irisflower/app/routes.py", line 13, in get
+    return model_loader.find_type_iris(features)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pandysudhan/dev/flask/irisflower/app/ml_integration/model_loader.py", line 7, in find_type_iris
+    model = joblib.load('ml_model_test.joblib')
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pandysudhan/dev/flask/irisflower/venv/lib/python3.11/site-packages/joblib/numpy_pickle.py", line 650, in load
+    with open(filename, 'rb') as f:
+         ^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'ml_model_test.joblib'
+2023-09-13 10:48:25,486 INFO: Microblog startup [in /Users/pandysudhan/dev/flask/irisflower/app/__init__.py:32]
+2023-09-14 12:09:54,885 INFO: Microblog startup [in /Users/pandysudhan/dev/flask/irisflower/app/__init__.py:32]
+2023-09-14 12:10:26,888 INFO: Microblog startup [in /Users/pandysudhan/dev/flask/irisflower/app/__init__.py:32]
